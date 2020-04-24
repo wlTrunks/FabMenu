@@ -22,7 +22,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -31,3 +30,6 @@ dependencies {
     implementation "com.google.android.material:material:1.2.0-alpha06"
     implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
 }
+
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
