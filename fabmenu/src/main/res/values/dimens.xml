@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="submenu_size">16dp</dimen>
+    <dimen name="submenu_text_size">10sp</dimen>
+</resources>

@@ -1,0 +1,3 @@
+rootProject.name='FabMenu'
+include ':app'
+include ':fabmenu'

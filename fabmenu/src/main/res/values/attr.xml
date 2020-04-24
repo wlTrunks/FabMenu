@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FabMenu">
+        <attr name="menu_background_color" format="color" />
+        <attr name="expand_icon" format="reference" />
+        <attr name="collapse_icon" format="reference" />
+        <attr name="menu_horizontal_bias" format="float" />
+        <attr name="menu_image_tint" format="color" />
+        <attr name="item_space" format="dimension" />
+        <attr name="submenu_text_color" format="reference" />
+        <attr name="submenu_image_size" format="dimension" />
+        <attr name="submenu_text_size" format="dimension" />
+    </declare-styleable>
+</resources>
