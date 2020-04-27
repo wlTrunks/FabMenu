@@ -6,7 +6,8 @@ ___________________________________________________
 
 # Preview
 
-![FABs Menu Preview](https://github.com/wlTrunks/FabMenu/raw/master/preview/fab_menu.gif){:height="400px" width="240px"}
+![FABs Menu Preview]<img src="https://github.com/wlTrunks/FabMenu/raw/master/preview/fab_menu.gif" width="400px" height="240px" />
+
 ___________________________________________________
 
 # Dependencies
