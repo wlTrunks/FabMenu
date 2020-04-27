@@ -6,12 +6,12 @@ ___________________________________________________
 
 # Preview
 
-![FABs Menu Preview](https://github.com/wlTrunks/FabMenu/raw/master/preview/fab_menu.gif)
+![FABs Menu Preview](https://github.com/wlTrunks/FabMenu/raw/master/preview/fab_menu.gif){:height="400px" width="240px"}
 ___________________________________________________
 
 # Dependencies
-   "com.google.android.material:material:1.2.0-alpha06"
-   "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
+*   "com.google.android.material:material:1.2.0-alpha06"
+*   "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
 
 ## How to implement
 
@@ -60,12 +60,11 @@ ___________________________________________________
 ## Attributes explanation
 
 FAB attributes:
-	* `collapse_icon` --> Set icon when menu fab collapsed
-	* `expand_icon` --> Set icon when menu fab expanded
-	* `item_space` --> Set space between submenus
-	* `menu_background_color` --> Set FAB backgroundColor
-	* `menu_horizontal_bias` --> Set horizontal bias of FabMenu 1.0f to 0.0f
-	* `menu_image_tint` --> Set FabMenu icon color
-	* `submenu_text_color` --> Set Submenus text color
-	* `submenu_text_size` --> Set Submenus text size
-	* `submenu_image_size` --> Set Submenus icon size
+* `collapse_icon` --> Set icon when menu fab collapsed
+* `expand_icon` --> Set icon when menu fab expanded
+* `menu_background_color` --> Set FAB backgroundColor
+* `menu_horizontal_bias` --> Set horizontal bias of FabMenu 1.0f to 0.0f
+* `menu_image_tint` --> Set FabMenu icon color
+* `submenu_text_color` --> Set Submenus text color
+* `submenu_text_size` --> Set Submenus text size
+* `submenu_image_size` --> Set Submenus icon size

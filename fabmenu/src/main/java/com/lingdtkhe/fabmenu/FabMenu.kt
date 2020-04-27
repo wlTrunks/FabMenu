@@ -150,24 +150,24 @@ class FabMenu @JvmOverloads constructor(
             menuHorizontalBias > 0.5f -> {
                 set.connect(
                     fab.id,
-                    ConstraintSet.RIGHT,
+                    ConstraintSet.END,
                     menuFab.id,
-                    ConstraintSet.RIGHT,
+                    ConstraintSet.END,
                     margin.toInt() / 2
                 )
             }
             menuHorizontalBias < 0.5f -> {
                 set.connect(
                     fab.id,
-                    ConstraintSet.LEFT,
+                    ConstraintSet.START,
                     menuFab.id,
-                    ConstraintSet.LEFT,
+                    ConstraintSet.START,
                     margin.toInt() / 2
                 )
             }
             else -> {
-                set.connect(fab.id, ConstraintSet.LEFT, menuFab.id, ConstraintSet.LEFT, 0)
-                set.connect(fab.id, ConstraintSet.RIGHT, menuFab.id, ConstraintSet.RIGHT, 0)
+                set.connect(fab.id, ConstraintSet.START, menuFab.id, ConstraintSet.START, 0)
+                set.connect(fab.id, ConstraintSet.END, menuFab.id, ConstraintSet.END, 0)
             }
         }
         set.applyTo(constraintLayout)
