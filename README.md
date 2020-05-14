@@ -5,6 +5,7 @@ and  `ExtendedFloatingActionButton` as submenus  [Extended Floating Action Butto
 ___________________________________________________
 
 # Preview
+Last Version 0.0.3
 
 ![FABs Menu Preview]<img src="https://github.com/wlTrunks/FabMenu/raw/master/preview/fab_menu.gif" width="240px" height="400px" />
 
@@ -15,7 +16,7 @@ ___________________________________________________
 *   "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
 
 ## How to implement
-*   implementation 'com.lingdtkhe.fabmenu:fabmenu:0.0.3'
+*   implementation 'com.lingdtkhe.fabmenu:fabmenu:0.0.+'
 
 
 ```xml
