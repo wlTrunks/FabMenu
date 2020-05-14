@@ -15,6 +15,8 @@ ___________________________________________________
 *   "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
 
 ## How to implement
+*   implementation 'com.lingdtkhe.fabmenu:fabmenu:0.0.3'
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
