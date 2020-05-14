@@ -142,35 +142,7 @@ class FabMenu @JvmOverloads constructor(
             shrink()
             this
         }
-        val set = ConstraintSet()
-        set.clone(constraintLayout)
-        val margin = resources.getDimension(R.dimen.margin) / resources.displayMetrics.density
-        set.connect(fab.id, ConstraintSet.TOP, menuFab.id, ConstraintSet.TOP, 0)
-        when {
-            menuHorizontalBias > 0.5f -> {
-                set.connect(
-                    fab.id,
-                    ConstraintSet.END,
-                    menuFab.id,
-                    ConstraintSet.END,
-                    margin.toInt() / 2
-                )
-            }
-            menuHorizontalBias < 0.5f -> {
-                set.connect(
-                    fab.id,
-                    ConstraintSet.START,
-                    menuFab.id,
-                    ConstraintSet.START,
-                    margin.toInt() / 2
-                )
-            }
-            else -> {
-                set.connect(fab.id, ConstraintSet.START, menuFab.id, ConstraintSet.START, 0)
-                set.connect(fab.id, ConstraintSet.END, menuFab.id, ConstraintSet.END, 0)
-            }
-        }
-        set.applyTo(constraintLayout)
+        setLayoutParamsSubmenu(fab)
     }
 
     fun hideMenu() {
@@ -214,6 +186,47 @@ class FabMenu @JvmOverloads constructor(
      */
     fun getMainMenu(): FloatingActionButton = parentView.menuFab
 
+    fun setHorizontalBias(bias: Float) {
+        menuHorizontalBias = bias
+        setFabMenuHorizontalBias()
+        subMenuItems.forEach { setLayoutParamsSubmenu(it) }
+    }
+
+    fun getMenuHorizontalBias(): Float = menuHorizontalBias
+
+    private fun setLayoutParamsSubmenu(fab: ExtendedFloatingActionButton) {
+        val set = ConstraintSet()
+        set.clone(constraintLayout)
+        set.clear(fab.id)
+        val margin = resources.getDimension(R.dimen.margin) / resources.displayMetrics.density
+        set.connect(fab.id, ConstraintSet.TOP, menuFab.id, ConstraintSet.TOP, 0)
+        when {
+            menuHorizontalBias > 0.5f -> {
+                set.connect(
+                    fab.id,
+                    ConstraintSet.END,
+                    menuFab.id,
+                    ConstraintSet.END,
+                    margin.toInt() / 2
+                )
+            }
+            menuHorizontalBias < 0.5f -> {
+                set.connect(
+                    fab.id,
+                    ConstraintSet.START,
+                    menuFab.id,
+                    ConstraintSet.START,
+                    margin.toInt() / 2
+                )
+            }
+            else -> {
+                set.connect(fab.id, ConstraintSet.START, menuFab.id, ConstraintSet.START, 0)
+                set.connect(fab.id, ConstraintSet.END, menuFab.id, ConstraintSet.END, 0)
+            }
+        }
+        set.applyTo(constraintLayout)
+    }
+
     /**
      * Setup menu fab
      */
@@ -235,6 +248,14 @@ class FabMenu @JvmOverloads constructor(
                     hideMenu()
                 }
             }
+        }
+    }
+
+    private fun setFabMenuHorizontalBias() {
+        with(parentView.menuFab) {
+            val params = layoutParams as ConstraintLayout.LayoutParams
+            params.horizontalBias = menuHorizontalBias
+            layoutParams = params
         }
     }
 

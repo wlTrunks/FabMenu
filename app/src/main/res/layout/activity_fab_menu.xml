@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu_background_color="@color/colorAccent"
-        app:menu_horizontal_bias="1"
+        app:menu_horizontal_bias="0"
         app:menu_image_tint="@android:color/white"
         app:submenu_text_color="@color/clickable_text"
         app:submenu_text_size="10sp" />
