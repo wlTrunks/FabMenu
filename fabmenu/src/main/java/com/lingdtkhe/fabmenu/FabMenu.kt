@@ -128,7 +128,9 @@ class FabMenu @JvmOverloads constructor(
             id = View.generateViewId()
             parentView.constraintLayout.addView(this)
             textSize = subMenuTextSize / resources.displayMetrics.density
-            setTextColor(ContextCompat.getColorStateList(context, subMenuTextColor))
+            ContextCompat.getColorStateList(context, subMenuTextColor)?.let {
+                setTextColor(it)
+            }
             iconTint = ContextCompat.getColorStateList(context, android.R.color.white)
             setIconResource(resId)
             iconSize = subMenuImageSize

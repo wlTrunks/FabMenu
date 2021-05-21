@@ -12,8 +12,8 @@ Last Version 0.0.3
 ___________________________________________________
 
 # Dependencies
-*   "com.google.android.material:material:1.2.0-alpha06"
-*   "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
+*   "com.google.android.material:material:1.4.0-beta01"
+*   "androidx.constraintlayout:constraintlayout:2.1.0-beta02"
 
 ## How to implement
 *   implementation 'com.lingdtkhe.fabmenu:fabmenu:0.0.+'
